@@ -1,6 +1,13 @@
-# Uncomment to run targets sequentially on your local machine.
-#targets::tar_make()
+argv <- commandArgs(trailingOnly = TRUE)
+workers <- as.numeric(argv[1])
 
-# Uncomment to run targets in parallel
-# on local processes or a Sun Grid Engine cluster.
-targets::tar_make_clustermq(workers = parallel::detectCores())
+if (workers == 1) {
+  targets::tar_make()
+} else if (workers == 100) {
+  targets::tar_make_clustermq(
+   workers = parallel::detectCores())
+} else if (is.numeric(workers)) {
+# for HPC
+  targets::tar_make_clustermq(
+   workers = workers)
+}

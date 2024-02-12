@@ -1,12 +1,12 @@
 version: '3'
 services:
-  quarto-targets-template:
+  rdv-template:
     image: mattocci/cmdstan-verse-zsh:4.3.2
-    container_name: quarto-targets-template
+    container_name: rdv-template
     user: rstudio
     environment:
       - RENV_PATHS_CACHE=/renv
       - INSIDE_DOCKER=true
     volumes:
-      - $HOME/quarto-targets-template:/home/rstudio/quarto-targets-template
+      - $HOME/rdv-template:/home/rstudio/rdv-template
       - $HOME/renv:/renv
