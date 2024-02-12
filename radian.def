@@ -1,0 +1,11 @@
+BootStrap: docker
+From: mattocci/cmdstan-verse:4.3.2
+
+%apprun R
+  exec R "${@}"
+
+%apprun Rscript
+  exec Rscript "${@}"
+
+%runscript
+  exec R "${@}"
