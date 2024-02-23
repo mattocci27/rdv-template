@@ -19,21 +19,25 @@ menu() {
   3)
  		apptainer exec  \
 		--env INSIDE_CONTAINER=true \
+  	--env RENV_PATHS_CACHE=${HOME}/renv \
  		radian.sif Rscript R/run_script.R 1
     ;;
   4)
  		apptainer exec \
   	--env INSIDE_CONTAINER=true \
+  	--env RENV_PATHS_CACHE=${HOME}/renv \
  		radian.sif Rscript R/run_script.R 32
     ;;
   5)
  		apptainer shell \
 		--env INSIDE_CONTAINER=true \
+  	--env RENV_PATHS_CACHE=${HOME}/renv \
 		radian.sif bash
     ;;
   6)
  		singularity shell \
   	--env INSIDE_CONTAINER=true \
+  	--env RENV_PATHS_CACHE=${HOME}/renv \
 		radian.sif bash
     ;;
 	*)
