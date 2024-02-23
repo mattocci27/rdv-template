@@ -10,7 +10,7 @@ if (Sys.info()[['sysname']] %in% c('Linux', 'Windows')) {
 	}
 options(renv.config.repos.override = getOption("repos"))
 
-if (Sys.getenv("INSIDE_DOCKER") == "true") {
+if (Sys.getenv("INSIDE_CONTAINER") == "true") {
   # Docker-specific settings
   Sys.setenv(RENV_PATHS_CACHE = "/renv")
   .libPaths(new = c(.libPaths(), "/home/rstudio/vscode-R/renv/library/R-4.3/x86_64-pc-linux-gnu"))

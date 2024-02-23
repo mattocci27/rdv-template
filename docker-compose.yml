@@ -6,7 +6,7 @@ services:
     user: rstudio
     environment:
       - RENV_PATHS_CACHE=/renv
-      - INSIDE_DOCKER=true
+      - INSIDE_CONTAINER=true
     volumes:
       - $HOME/rdv-template:/home/rstudio/rdv-template
       - $HOME/renv:/renv
