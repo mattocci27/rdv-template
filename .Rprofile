@@ -14,4 +14,8 @@ if (Sys.getenv("INSIDE_CONTAINER") == "true") {
   # Docker-specific settings
   Sys.setenv(RENV_PATHS_CACHE = "/renv")
   .libPaths(new = c(.libPaths(), "/home/rstudio/vscode-R/renv/library/R-4.3/x86_64-pc-linux-gnu"))
+
+  # Set the CMDSTAN_PATH environment variable
+  cmdstan_path <- Sys.getenv("CMDSTAN_PATH", unset = NA)
+  cmdstanr::set_cmdstan_path(cmdstan_path)
 }
