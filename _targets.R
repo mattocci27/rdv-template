@@ -2,7 +2,6 @@ library(targets)
 library(tarchetypes)
 library(tidyverse)
 library(stantargets)
-library(cmdstanr)
 library(furrr)
 library(bayesplot)
 
@@ -14,6 +13,7 @@ options(clustermq.scheduler = "multicore")
 
 tar_option_set(packages = c(
   "tidyverse",
+  "cmdstanr",
   "bayesplot",
   "ggrepel",
   "patchwork",
@@ -26,12 +26,6 @@ tar_option_set(
   garbage_collection = TRUE,
   memory = "transient"
 )
-
-# check if it's inside a container
-Sys.setenv(CMDSTAN = "/opt/cmdstan/cmdstan-2.34.1")
-set_cmdstan_path("/opt/cmdstan/cmdstan-2.34.1")
-
-cmdstan_version()
 
 list(
   # eight schools
