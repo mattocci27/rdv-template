@@ -3,7 +3,7 @@ services:
   PROJECT_NAME_PLACEHOLDER:
     image: mattocci/cmdstan-verse-zsh:4.3.2
     container_name: PROJECT_NAME_PLACEHOLDER
-    user: rstudio
+    user: ${HOST_UID}:${HOST_GID}
     environment:
       - RENV_PATHS_CACHE=/renv
       - INSIDE_CONTAINER=true

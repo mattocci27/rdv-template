@@ -3,7 +3,7 @@ services:
   rdv-template:
     image: mattocci/cmdstan-verse-zsh:4.3.2
     container_name: rdv-template
-    user: rstudio
+    user: ${HOST_UID}:${HOST_GID}
     environment:
       - RENV_PATHS_CACHE=/renv
       - INSIDE_CONTAINER=true
