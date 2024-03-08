@@ -30,5 +30,8 @@ knitr::opts_chunk$set(
   fig.show = "hold",
   root.dir = rprojroot::find_root('_targets.R')
 )
-hist(rnorm(100))
+```
+
+```{r}
+hist(rnorm(1000))
 ```
