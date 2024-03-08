@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scripts/setup_dev_container.sh
+# scripts/setup_dev_container.sh
 scripts/make_renviron.sh
 
 # Define the path to the apptainer.sif file
