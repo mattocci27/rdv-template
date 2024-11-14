@@ -22,7 +22,7 @@
 				"rlivings39.fzf-quick-open"
 			],
 			"settings": {
-				"r.rterm.linux": "/usr/local/bin/radian",
+				"r.rterm.linux": "/opt/venv/bin/radian",
 				"r.rpath.linux": "/usr/local/bin/R",
 				"r.libPaths": [
           "/home/rstudio/vscode-R/renv/library/linux-ubuntu-noble/R-4.4/x86_64-pc-linux-gnu/",
