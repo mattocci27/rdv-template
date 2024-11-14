@@ -25,9 +25,9 @@
 				"r.rterm.linux": "/usr/local/bin/radian",
 				"r.rpath.linux": "/usr/local/bin/R",
 				"r.libPaths": [
-					"/home/rstudio/vscode-R/renv/library/R-4.3/x86_64-pc-linux-gnu",
-					"/home/rstudio/vscode-R/renv/library/R-4.3/aarch64-unknown-linux-gnu"
-				],
+          "/home/rstudio/vscode-R/renv/library/linux-ubuntu-noble/R-4.4/x86_64-pc-linux-gnu/",
+          "/home/rstudio/vscode-R/renv/library/linux-ubuntu-noble/R-4.4/aarch64-unknown-linux-gnu/"
+        ],
 				"quarto.path": "/usr/local/bin/quarto"
 			}
 		}
