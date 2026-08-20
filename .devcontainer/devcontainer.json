@@ -44,7 +44,7 @@
 				"anthropic.claude-code"
 				],
 				"settings": {
-  				"http.proxy": "http://host.docker.internal:2080",
+          "http.proxy": "http://127.0.0.1:2080",
     			"http.proxyStrictSSL": false,
 					"r.rterm.linux": "/opt/venv/bin/radian",
 					"r.rpath.linux": "/usr/local/bin/R",
